@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Записатися</title>
+    <style>
+       
+        table {
+            border-collapse:collapse;
+            border: 1px solid black;
+        }
+
+        th {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        td:last-child {
+            border: 0px solid black;
+            border-left: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <h1>Записатися</h1>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.PatientId" name="PatientId" />
+            <table>
+                <tr>
+                    <td><p>Введіть Ім'я: </p></td>
+                    <td><input type="text" name="PatientFirstName" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введіть дату та час:</p></td>
+                    <td>
+                        <input type="date" name="PatientTimeToGo" />
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Відправити" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
